@@ -93,11 +93,9 @@ object Jadwiga {
 }
 
 object JadwigaApp extends App {
-  private def detectEnd(msg: String): Boolean = msg == "koniec"
-
   private def handleMsg(msg: String): Boolean = {
     println(Jadwiga reply msg.toLowerCase.replaceAll("[!?.,\\-()]", ""))
-    !detectEnd(msg)
+    msg != "do widzenia"
   }
 
   while (handleMsg(readLine(">"))) {}
