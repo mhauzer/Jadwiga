@@ -3,8 +3,7 @@ package com.mhalab
 import scala.io.StdIn.readLine
 
 object Jadwiga {
-  def reply(msg: String): String = msg split " " match {
-    case Array("cześć") => "witaj"
+  def reply(msg: String): String = msg split "\\s+" match {
     case Array("hej") => "cze"
     case Array("hejka") => "no hejka!"
     case Array("siema") => "no siema"
