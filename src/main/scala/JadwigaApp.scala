@@ -60,7 +60,7 @@ object Jadwiga {
     case Array("jak", "się", "nazywasz") => "Jadwiga"
     case Array("czuję", "się", x) => s"Jak bardzo $x?"
     case Array("jak", "to", x) => s"no $x"
-    case Array("nie", x, "mnie") => "Bo?"
+    case Array("nie", _, "mnie") => "Bo?"
     case Array("nie", _, "się") => "Dobrze, ale jak?"
     case Array("lubisz", x, _) => s"Nie lubię $x :("
     case Array("nie", _, _) => "Spróbuj"
@@ -82,11 +82,11 @@ object Jadwiga {
 
     case Array("wiesz", _, _, _) => "Wiem ale chcę o tym usłyszeć od Ciebie."
     case Array("bo", _, _, _) => "Rozumiem"
-    case Array("nie", x, y, z) => s"$y $z?"
+    case Array("nie", _, y, z) => s"$y $z?"
     case Array("co", _, _, "słychać") => "to zależy"
     case Array("jak", "ci", z, p) => s"A Tobie jak $z $p?"
     case Array(_, "matka", _, _) => "Opowiedz mi więcej o swojej rodzinie"
-    case Array(x, "mi", _, _) => s"Wolę jak Ty to robisz"
+    case Array(_, "mi", _, _) => s"Wolę jak Ty to robisz"
     case Array(x, "jest", y, z) => s"Dlaczego uważasz, że $x jest $y $z?"
     case Array(_, "lubisz", x, _) => s"Nie. Nie lubię $x"
     case Array(_, y, "jest", z) => s"Dlaczego $y jest $z?"
@@ -104,10 +104,12 @@ object Jadwiga {
 }
 
 object JadwigaApp extends App {
-  private def handleMsg(msg: String): Boolean = {
+  private val StopCondition = "do widzenia"
+
+  private def handleMsg(msg: String, stopCondition: String): Boolean = {
     println(Jadwiga reply msg.toLowerCase.replaceAll("[!?.,\\-()]", ""))
-    msg != "do widzenia"
+    msg != stopCondition
   }
 
-  while (handleMsg(readLine(">"))) {}
+  while (handleMsg(readLine(">"), StopCondition)) {}
 }
