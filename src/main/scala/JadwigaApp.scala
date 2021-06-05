@@ -16,6 +16,7 @@ object Jadwiga {
     case Array("dlaczego") => "trudno powiedzieć"
     case Array("dobrze") => ":)"
     case Array("źle") => ":("
+    case Array("co") => "pstro"
     case Array(x) => s"Aha, $x"
 
     case Array("dzień", "dobry") => "dzień dobry"
@@ -23,6 +24,7 @@ object Jadwiga {
     case Array("która", "godzina") => "nie mam zegarka"
     case Array("nie", "wiem") => "wymyśl coś"
     case Array("nie", "chcę") => "Postaraj się"
+    case Array("nie", "rozumiem") => "Mam Ci to wytłumaczyć?"
     case Array("o", "czym") => "O czym chcesz"
     case Array("jak", "leci") => "powolutku"
     case Array("jak", "tam") => "jakoś leci"
@@ -30,7 +32,7 @@ object Jadwiga {
     case Array("jak", "to") => "no tak"
     case Array("co", "słychać") => "miałam dużo pracy"
     case Array("od", "czego") => "od wielu różnych rzeczy"
-    case Array("na", "przykład") => "Nie chcę o tym teraz kmówić. Porozmawiajmy lepiej o Tobie!"
+    case Array("na", "przykład") => "Nie chcę o tym teraz mówić. Porozmawiajmy lepiej o Tobie!"
     case Array("a", "ty") => "Jesteśmy tu po to aby rozmawiać o Tobie."
     case Array("jestem", x) => s"$x?"
     case Array("co", _) => s"nic"
@@ -58,6 +60,7 @@ object Jadwiga {
 
     case Array("dwa", "razy", "dwa") => "cztery"
     case Array("jak", "się", "nazywasz") => "Jadwiga"
+    case Array("jak", "się", _) => "Dobrze"
     case Array("czuję", "się", x) => s"Jak bardzo $x?"
     case Array("jak", "to", x) => s"no $x"
     case Array("nie", _, "mnie") => "Bo?"
