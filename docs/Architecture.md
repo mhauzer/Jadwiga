@@ -1,8 +1,8 @@
 # Jadwiga - High Level Architecture
 
 Jadwiga as a web application comprises two main components:
-- UI-providing frontend application,
-- backend service.
+- providing frontend application (UI),
+- backend service (REST API).
 
 |![hla](images/Architecture.jpg "High Level Architecture Diagram")|
 :---:
@@ -11,7 +11,7 @@ Jadwiga as a web application comprises two main components:
 
 ## Frontend application
 
-Frontend application works in a web browser and serves as a User Interface.
+Frontend application works in a web browser and serves as User Interface.
 
 ## Backend service
 

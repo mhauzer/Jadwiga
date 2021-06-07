@@ -8,7 +8,15 @@ Jadwiga is a simple, ELIZA-like chatbot that speaks Polish!
 
 * [Windows executable](jadwiga.exe)
 
-## Developers
+## Documentation
 
-* [Easy tasks for beginners](https://github.com/mhauzer/Jadwiga/contribute)
-* [Developer Guide](docs/Developer_Guide.md)
+### Design
+
+- [High Level Architecture](docs/Architecture.md)
+
+### Developers
+
+- [Developer Guide](docs/Developer_Guide.md)
+- [Jadwiga API](docs/Api.md)
+- [Jadwiga UI](docs/Ui.md)
+- [Easy tasks for beginners](https://github.com/mhauzer/Jadwiga/contribute)
