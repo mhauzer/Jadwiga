@@ -4,7 +4,9 @@ Jadwiga as a web application comprises two main components:
 - UI-providing frontend application,
 - backend service.
 
-![Architecture](images/Architecture.jpg "High Level Architecture Diagram")
+<p align="center">
+<img width="240" src="images/Architecture.jpg" alt="High Level Architecture Diagram">
+</p>
 
 Source: [[Miro](https://miro.com/app/board/o9J_lA6r_fQ=/?moveToWidget=3074457359772091182&cot=14)]
 
